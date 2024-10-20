@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Surplus Connection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        header {
+            background-color: #9ACD32;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffffff;
+            position: relative;
+        }
+        a {
+            text-decoration: none;
+            background-color: #ffffff;
+            color: #9ACD32;
+            padding: 8px 16px;
+            border-radius: 4px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-weight: 600;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin: 0 80px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        
+        .auth-links {
+            display: flex;
+            align-items: center;
+            margin-right: 0; 
+        }
+        
+        .auth-button {
+            background-color: white;
+            color: #9ACD32;
+            padding: 8px 15px;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 10px; 
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em; 
+        }
+        
+        .main-content {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label, input, button {
+            margin-bottom: 10px;
+        }
+        
+        button[type="submit"] {
+            background-color: #9ACD32;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            font-size: 16px;
+            width: 150px;
+            align-self: center;
+        }
+        header a {
+            position: static;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="sign-up-and-other-detz.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-links">
+                <a href="sign-up-and-other-detz.html" class="auth-button">SIGN UP</a>
+                <a href="login.html" class="auth-button">LOGIN</a>
+            </div>
+        </nav>
+        <h1>Sign Up</h1>
+    </header>
+    
+    <div class="main-content">
+        <form action="/sign-up" method="post">
+            <p>Which of these best describes you?</p>
+            <div>
+                <input type="radio" id="restaurant" name="user_type" value="restaurant" required>
+                <label for="restaurant">Restaurant/Cafe</label>
+            </div>
+            <div>
+                <input type="radio" id="volunteer" name="user_type" value="volunteer">
+                <label for="volunteer">Individual Volunteer</label>
+            </div>
+            <div>
+                <input type="radio" id="organization" name="user_type" value="organization">
+                <label for="organization">Volunteering Service/Organization</label>
+            </div>
+    
+            <div id="commonFields">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" required><br>
+                
+                <label for="address">Address:</label><br>
+                <input type="text" id="address" name="address" required><br>
+                
+                <label for="city">City:</label><br>
+                <input type="text" id="city" name="city" required><br>
+                
+                <label for="state">State:</label><br>
+                <input type="text" id="state" name="state" required><br>
+                
+                <label for="postal">Postal Code:</label><br>
+                <input type="text" id="postal" name="postal" required><br>
+            </div>
+            
+            <div id="restaurantFields" style="display:none;">
+                <label for="restaurant_name">Restaurant/Cafe Name:</label><br>
+                <input type="text" id="restaurant_name" name="restaurant_name"><br>
+            </div>
+            
+            <div id="volunteerFields" style="display:none;">
+                <label for="first_name">First Name:</label><br>
+                <input type="text" id="first_name" name="first_name"><br>
+                <label for="last_name">Last Name:</label><br>
+                <input type="text" id="last_name" name="last_name"><br>
+            </div>
+            
+            <div id="organizationFields" style="display:none;">
+                <label for="organization_name">Organization Name:</label><br>
+                <input type="text" id="organization_name" name="organization_name"><br>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

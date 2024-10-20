@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Surplus Connection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0f0f0; 
+            color: #333;
+            min-height: 100vh; 
+        }
+        
+        header {
+            background-image: url('E:/Programming/Clarkathon 1/static/images/photov.jpg');
+            background-size: 68%; 
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffffff;
+            position: relative;
+            min-height: 450px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header h1 {
+    color: #ffffff; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+    font-size: 2.5em;
+    margin-bottom: 10px; 
+}
+
+header p {
+    color: #ffffff; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
+    font-size: 1.2em; 
+}
+
+        header::before {
+            content: '';
+            position: absolute; 
+            top: 0;
+            right: 0; 
+            bottom: 0; 
+            left: 0; 
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        header * {
+            position: relative; 
+            z-index: 2; 
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: calc(100% - 40px); 
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        nav {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .auth-links {
+            display: flex;
+            align-items: center;
+            margin-right: 0; 
+        }
+        
+        .auth-button {
+            background-color: white;
+            color: #9ACD32;
+            padding: 8px 15px;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 10px; 
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9em; 
+        }
+        
+        .get-started-button {
+            background-color: white;
+            color: #9ACD32;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            width: 150px; 
+            text-align: center;
+        }
+
+        .main-content {
+            padding: 20px;
+            background-color: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            padding: 50px 0;
+        }
+        
+        .about-text {
+            flex: 0 0 60%;
+            padding: 20px;
+            max-width: 60%;
+        
+        }
+        
+        .about-text h2 {
+            margin-top: 0;
+        }
+        
+        .button {
+            background-color: #a4c639;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="/data">Data</a></li>
+                    <li><a href="sign-up-and-other-detz.html">Get Involved</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="sign-up-and-other-detz.html" class="auth-button">SIGN UP</a>
+                <a href="login.html" class="auth-button">LOGIN</a>
+            </div>
+        </div>
+        <h1>Connecting food surplus to those in need</h1>
+        <p>Reducing waste, fighting hunger</p>
+        <a href="sign-up-and-other-detz.html" class="get-started-button">Get started</a>
+        
+    </header>
+    
+    <div class="main-content">
+        <div class="about-section">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>At EmpoweRRRs, we connect restaurants with shelters and organizations to reduce food waste and fight hunger. By redistributing surplus food to those in need, we help minimize waste while supporting the homeless and low-income families in Worcester. Our platform tracks and alerts users about available food, ensuring efficient distribution to shelters and individuals facing food insecurity.</p>
+            </div>
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p> Our mission is to combat food waste and hunger by connecting food services with shelters and organizations that serve the homeless and low-income communities. We aim to ensure that surplus food is efficiently redistributed, preventing waste and providing nutritious meals to those in need. </p>
+        </div>
+    </div>
+</body>
+</html>

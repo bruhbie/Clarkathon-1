@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Food Surplus Alert - Food Surplus Connection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        header {
+            background-color: #9ACD32;
+            background-size: cover;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #ffffff;
+            position: relative;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            margin: 0 20px;
+        }
+        
+        .main-content {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 2px;
+        }
+        
+        input, textarea {
+            margin-bottom: 10px;
+        }
+        
+        .button {
+            background-color: #9ACD32;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .auth-button {
+            background-color: white;
+            color: #9ACD32;
+            padding: 5px 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="sign-up-and-other-detz.html">Get Involved</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <h1>Your Profile</h1>
+    </header>
+    
+    <div class="main-content">
+        <h2>Create Food Surplus Alert</h2>
+        <form action="/create-alert" method="post">
+            <label for="foodType">Type of Food:</label>
+            <input type="text" id="foodType" name="foodType" required>
+
+            <label for="preparedTime">Time Prepared:</label>
+            <input type="datetime-local" id="preparedTime" name="preparedTime" required>
+
+            <label for="allergyInfo">Allergy Information:</label>
+            <textarea id="allergyInfo" name="allergyInfo"></textarea>
+
+            <label for="foodAmount">Amount of Food (in lbs):</label>
+            <input type="number" id="foodAmount" name="foodAmount" required>
+
+            <label for="location">Business Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <button type="submit" class="button">Send Alert</button>
+        </form>
+    </div>
+</body>
+</html>

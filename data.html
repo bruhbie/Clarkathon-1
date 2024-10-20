@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Surplus Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Food Surplus Data</h1>
+
+    <h2>Active Alerts</h2>
+    <table>
+        <tr>
+            <th>Restaurant</th>
+            <th>Food Type</th>
+            <th>Quantity</th>
+            <th>Posted At</th>
+        </tr>
+        {% for alert in alerts %}
+        <tr>
+            <td>{{ alert[1] }}</td>
+            <td>{{ alert[2] }}</td>
+            <td>{{ alert[3] }}</td>
+            <td>{{ alert[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Shelter Information</h2>
+    <table>
+        <tr>
+            <th>Volunteering Organizations</th>
+            <th>Names of Shelters</th>
+            <th>Contact Info</th>
+        </tr>
+        {% for shelter in shelters %}
+        <tr>
+            <td>{{ shelter.volunteering_orgs }}</td>
+            <td>{{ shelter.names_of_shelters }}</td>
+            <td>{{ shelter.contact_info }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
